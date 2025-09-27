@@ -12,4 +12,4 @@
 <um href="https://miro.com/app/board/uXjVJF6kVUk=/"=>Link Miro Brainstorm.</i>um>
 
 <h2> Metodologia Ágil: </h2>
-<h3>um href="https://trello.com/lucasalves976/boards">Link da Metodologia.</h3>
+<h3>um href="https://github.com/users/LeandraLemos08/projects/1/settings">Link da Metodologia.</h3>
