@@ -90,6 +90,7 @@ O SyncHealth será um aplicativo de saúde móvel desenvolvido para reduzir o te
 
 ## Estrutura
 
+```text
 SyncHealth
 │
 ├── README.md
@@ -103,3 +104,4 @@ SyncHealth
 ├── sql
 │
 └── src
+```
