@@ -1,108 +1,105 @@
 # SyncHealth
 
-SyncHealth is a mobile health application designed to reduce patient waiting times and improve access to public healthcare units.
-Real-time queue data is collected from users and displayed on an interactive map. Appointment scheduling is supported remotely, so patients are notified when it is time to travel to the unit.
+O SyncHealth será um aplicativo de saúde móvel desenvolvido para reduzir o tempo de espera dos pacientes e melhorar o acesso às unidades de saúde pública. Os dados da fila em tempo real serão coletados dos usuários e exibidos em um mapa interativo. O agendamento de consultas será feito remotamente, para que os pacientes sejam notificados quando for a hora de se deslocarem até a unidade.
 
 ---
 
-## Team
+## Autora
 
 - Leandra Lemos
 
 ---
 
-## Technologies Used
+## Tecnologias Usadas
 
-- **JavaScript** — Main programming language used across the application (frontend and backend logic)
-- **MySQL** — Used to store and manage all application data (users, appointments, medical conditions, history)
-- **Figma / Canva** — Used to design the application screens and presentation materials
-- **GitHub / VSCode** — Used for version control, team collaboration, and code editing
-
----
-
-## Features
-
-- Health units near the user are displayed in real time on an interactive map, with color-coded wait times (fast, medium, slow).
-- Appointments are scheduled remotely so that patients are only required to travel when their turn is approaching.
-- A chatbot is equipped with triage protocols (such as the Manchester Protocol) so that patients are guided and monitored before arrival.
-- Family health profiles are supported, so that dependents are managed under a single account.
-- Individual information about each unit (type, address, status) is made accessible to patients directly in the app.
-- An SOS feature is included so that emergency situations are flagged immediately.
+- **JavaScript** — Principal linguagem de programação que será utilizada em toda a aplicação (lógica de front-end e back-end)
+- **MySQL** — Será utilizado para armazenar e gerenciar todos os dados da aplicação (usuários, agendamentos, condições médicas, histórico)
+- **Figma / Canva** — Serão utilizados para o design das telas da aplicação e materiais de apresentação
+- **GitHub / VSCode** — Serão utilizados para controle de versão, colaboração em equipe e edição de código
 
 ---
 
-## Installation
+## Funções
 
-Clone the repository to your local machine:
+- As unidades de saúde próximas ao usuário serão exibidas em tempo real em um mapa interativo, com tempos de espera codificados por cores (rápido, médio, lento).
 
-```bash
-git clone <repo-url>
-```
+- Os agendamentos serão feitos remotamente, para que os pacientes só precisem se deslocar quando estiver próximo do seu atendimento.
 
-Navigate into the project folder and install all dependencies:
+- Um chatbot estará equipado com protocolos de triagem (como o Protocolo de Manchester) para que os pacientes sejam orientados e monitorados antes da chegada.
 
-```bash
-cd synchealth
-npm install
-```
+- Perfis de saúde familiar serão póssiveis, permitindo que os dependentes sejam gerenciados em uma única conta.
 
-Set up the MySQL database by importing the provided schema file:
+- Informações individuais sobre cada unidade (tipo, endereço, status) serão disponibilizadas aos pacientes diretamente no aplicativo.
 
-```bash
-mysql -u root -p synchealth < database/schema.sql
-```
-
-Copy the environment variables file and fill in your database credentials:
-
-```bash
-cp .env.example .env
-```
+- Um recurso de SOS estará incluído para que situações de emergência sejam sinalizadas imediatamente.
 
 ---
 
-## How to Run
+## Instalação
 
-Start the development server:
-
-```bash
-npm run dev
-```
-
-The application will be available at `http://localhost:3000`.
+ Acesse o link e instale a aplicação. Após siga o passo a passo acéssivel de cadastro.
 
 ---
 
-## Changelog
+## Registro de alterações
 
 ### v1.0.0
-- The base database schema (ER diagram) was designed and modeled with all core entities: `usuario`, `atendimento`, `unidade_de_saude`, `familia`, `condicao_medica`, `medicacao`, and `historico`.
-- The initial wireframes for the home screen, side menu, and login screen were created in Figma.
-- The relational (logical) model was mapped from the ER diagram, and all foreign keys were defined.
+- O esquema base do banco de dados (diagrama ER) foi projetado e modelado com todas as entidades principais: `usuario`, `atendimento`, `unidade_de_saude`, `familia`, `condicao_medica`, `medicacao` e `historico`.
+
+- Os wireframes iniciais para a tela inicial, o menu lateral e a tela de login foram criados no Figma.
+
+- O modelo relacional (lógico) foi mapeado a partir do diagrama ER e todas as chaves estrangeiras foram definidas.
 
 ---
 
-## Known Issues
+## Problemas Conhecidos
 
-- Wait time estimates can be inaccurate when very few users are active in a given health unit area.
-- The chatbot responses should be reviewed by a medical professional before the system is released to the public.
-- Family profile access must be restricted by permission rules, which have not been fully implemented yet.
+- Não há problemas conhecidos no código até o momento, pois o desenvolvimento ainda não começou.
 
 ---
 
-## Roadmap
+## A ser trabalhado
 
-- Push notifications will be added so that patients are alerted automatically when their queue position changes.
-- The Manchester Protocol chatbot will be fully integrated so that triage recommendations are generated automatically for each patient session.
-- A feedback system will be implemented so that unit ratings and comments are collected from patients after each visit.
-- Dark mode will be added in a future release to improve accessibility.
+- Serão adicionadas notificações push para que os pacientes sejam alertados automaticamente quando sua posição na fila mudar.
+
+- O chatbot do Protocolo de Manchester será totalmente integrado para que as recomendações de triagem sejam geradas automaticamente para cada sessão do paciente.
+
+- Um sistema de feedback será implementado para que as avaliações e comentários dos pacientes sejam coletados após cada consulta.
+
+- O modo escuro será adicionado em uma versão futura para melhorar a acessibilidade.
 
 ---
 
-## Rules & Requirements
+## Regras e Requisitos
 
-- User passwords must be encrypted before they are stored in the database.
-- Invalid or incomplete form data must be rejected by the system before any record is saved.
-- Queue position and wait time must be recalculated automatically whenever a new check-in is registered.
-- Family profile access must be authorized by the account owner before any dependent's data is viewed or edited.
-- Emergency (SOS) requests must be prioritized and must not be blocked by any queue or scheduling restriction.
-- Patient medical history must be protected and must only be accessed by the authenticated account holder.
+- As respostas do chatbot devem ser revisadas por um profissional médico antes que o sistema seja disponibilizado ao público.
+
+- O acesso ao perfil familiar deve ser restrito por regras de permissão, que ainda não foram totalmente implementadas.
+
+- As senhas dos usuários devem ser criptografadas antes de serem armazenadas no banco de dados.
+
+- Dados inválidos ou incompletos do formulário devem ser rejeitados pelo sistema antes que qualquer registro seja salvo.
+
+- A posição na fila e o tempo de espera devem ser recalculados automaticamente sempre que um novo check-in for registrado.
+
+- O acesso ao perfil familiar deve ser autorizado pelo titular da conta antes que os dados de qualquer dependente sejam visualizados ou editados.
+
+- As solicitações de emergência (SOS) devem ser priorizadas e não devem ser bloqueadas por nenhuma restrição de fila ou agendamento.
+
+- O histórico médico do paciente deve ser protegido e só pode ser acessado pelo titular da conta autenticado.
+
+## Estrutura
+
+SyncHealth
+│
+├── README.md
+├── .gitignore
+├── LICENSE
+│
+├── .github
+│
+├── docs
+│
+├── sql
+│
+└── src
